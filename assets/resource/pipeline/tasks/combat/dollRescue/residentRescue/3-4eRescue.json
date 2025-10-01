@@ -9,7 +9,7 @@
         "action": "Swipe",
         "begin": [180, 120, 1, 1],
         "end": [900, 700, 1, 1],
-        "duration": 500,
+        "duration": 200,
         "post_delay": 1000,
         "next": [
             "3-4e拖动操作2"
@@ -20,7 +20,7 @@
         "action": "Swipe",
         "begin": [180, 120, 1, 1],
         "end": [900, 700, 1, 1],
-        "duration": 500,
+        "duration": 200,
         "post_delay": 1000,
         "next": [
             "3-4e拖动操作3"
@@ -31,7 +31,7 @@
         "action": "Swipe", 
         "begin": [180, 120, 1, 1],
         "end": [900, 700, 1, 1],
-        "duration": 500,
+        "duration": 200,
         "post_delay": 1000,
         "next": [
             "3-4e开始作战"
@@ -81,10 +81,22 @@
         "post_delay": 300,
         "target" : [37,622,74,18],
         "next":[
-            "3-4e点击boss"
+            "3-4e计划模式_路径点1"
         ]
     },
-    "3-4e点击boss":{
+    "3-4e计划模式_路径点1":{
+        "recognition": "OCR",
+        "roi" : [1109,640,73,45],
+        "expected": "执行",
+        "action": "LongPress",
+        "duration": 20,
+        "post_delay": 300,
+        "target" : [775,508,16,16],
+        "next":[
+            "3-4e计划模式_路径点boss"
+        ]
+    },
+    "3-4e计划模式_路径点boss":{
         "recognition": "OCR",
         "roi" : [1109,640,73,45],
         "expected": "执行",
