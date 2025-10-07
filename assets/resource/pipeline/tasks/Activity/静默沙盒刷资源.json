@@ -367,8 +367,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击梯队_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -388,8 +388,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击目标地点_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -409,8 +409,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_铁血_R_点击空白位置_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -430,8 +430,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击梯队_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -451,8 +451,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击目标地点_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -472,8 +472,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_铁血_L_点击空白位置_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -493,8 +493,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_指挥官_点击梯队_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -514,8 +514,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_指挥官_杂鱼_R_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -535,8 +535,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_指挥官_杂鱼_U_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -556,8 +556,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_1_指挥官_返回初始位置_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -728,8 +728,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_2_指挥官_点击梯队_twice_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -749,8 +749,8 @@
     },
     "静默沙盒_战斗阶段_计划模式_2_指挥官_点击目标地点_鼠标抬起": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "custom_mouse_left_up",
+        "action": "DoNothing",
+        // "custom_action": "custom_mouse_left_up",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
@@ -1041,8 +1041,8 @@
     },
     "静默沙盒_输出日志": {
         "recognition": "DirectHit",
-        "action": "Custom",
-        "custom_action": "sandbox_runtimes",
+        "action": "DoNothing",
+        // "custom_action": "sandbox_runtimes",
         "pre_delay": 100,
         "post_delay": 100,
         "next": [
