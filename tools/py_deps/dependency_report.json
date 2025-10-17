@@ -1,0 +1,115 @@
+{
+  "all_imports": [
+    "typing",
+    "server",
+    "os",
+    "win32process",
+    "datetime",
+    "input",
+    "win32gui",
+    "my_reco",
+    "time",
+    "config",
+    "re",
+    "threading",
+    "PIL",
+    "ctypes",
+    "queue",
+    "traceback",
+    "include",
+    "log",
+    "json",
+    "numpy",
+    "maa",
+    "action",
+    "requests",
+    "win32api",
+    "sys",
+    "win32ui",
+    "win32con"
+  ],
+  "file_imports": {
+    "my_reco.py": [
+      "maa"
+    ],
+    "config.py": [
+      "os"
+    ],
+    "main.py": [
+      "action",
+      "server",
+      "traceback",
+      "os",
+      "my_reco",
+      "time",
+      "maa",
+      "config",
+      "sys"
+    ],
+    "action/log.py": [
+      "traceback",
+      "include",
+      "os",
+      "json",
+      "requests",
+      "config",
+      "sys"
+    ],
+    "action/init.py": [
+      "input",
+      "log"
+    ],
+    "action/input.py": [
+      "include",
+      "log"
+    ],
+    "action/include.py": [
+      "ctypes",
+      "traceback",
+      "os",
+      "win32process",
+      "json",
+      "win32gui",
+      "numpy",
+      "time",
+      "PIL",
+      "maa",
+      "re",
+      "sys",
+      "win32api",
+      "win32ui",
+      "win32con"
+    ],
+    "server/server.py": [
+      "typing",
+      "queue",
+      "traceback",
+      "json",
+      "datetime",
+      "time",
+      "action",
+      "threading"
+    ],
+    "server/init.py": [
+      "server"
+    ]
+  },
+  "third_party": [
+    "PIL",
+    "action",
+    "ctypes",
+    "include",
+    "input",
+    "log",
+    "maa",
+    "numpy",
+    "queue",
+    "requests",
+    "server",
+    "win32api",
+    "win32con",
+    "win32gui",
+    "win32process",
+    "win32ui"
+  ]
+}

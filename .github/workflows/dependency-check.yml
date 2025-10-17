@@ -1,0 +1,72 @@
+name: Python Dependencies Check
+
+on:
+  push:
+    paths:
+      - 'agent/**/*.py'
+  pull_request:
+    paths:
+      - 'agent/**/*.py'
+
+jobs:
+  dependency-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+        
+    - name: Install scanning dependencies
+      run: |
+        python -m pip install --upgrade pip
+        
+    - name: Ensure py_deps directory exists
+      run: |
+        mkdir -p tools/py_deps
+        
+    - name: Scan dependencies
+      run: |
+        python tools/dev/scan_dependencies.py
+        
+    - name: Check for changes
+      id: changes
+      run: |
+        if [[ -n $(git status --porcelain) ]]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit and push changes
+      if: steps.changes.outputs.changes == 'true' && github.event_name == 'push'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add tools/py_deps/requirements.txt tools/py_deps/dependency_report.json
+        git commit -m "Auto-update dependencies [skip ci]" || exit 0
+        git push
+        
+    - name: Create summary
+      run: |
+        echo "## 🔍 Python依赖检查结果" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📦 发现的第三方库依赖:" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        if [ -f tools/py_deps/requirements.txt ]; then
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat tools/py_deps/requirements.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+        fi
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📋 手动安装命令:" >> $GITHUB_STEP_SUMMARY
+        echo '```bash' >> $GITHUB_STEP_SUMMARY
+        echo "pip install -r tools/py_deps/requirements.txt" >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📊 详细报告:" >> $GITHUB_STEP_SUMMARY
+        echo "依赖详细信息已保存到 \`tools/py_deps/dependency_report.json\`" >> $GITHUB_STEP_SUMMARY
